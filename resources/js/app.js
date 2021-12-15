@@ -1,15 +1,6 @@
-require("./bootstrap");
-Vue.use(VueRouter);
 import Vue from "vue";
-import VueRouter from "vue-router";
-import Example from "./components/ExampleComponent.vue";
-
-const routes = [{ path: "/", component: Home }];
-
-const router = new VueRouter({
-    mode: "history",
-    routes,
-});
+import "./bootstrap";
+import router from "./router";
 
 const app = new Vue({
     data() {
@@ -18,8 +9,6 @@ const app = new Vue({
         };
     },
     router,
-    components: {
-        Example,
-    },
+    components: {},
 });
 app.$mount("#app");
